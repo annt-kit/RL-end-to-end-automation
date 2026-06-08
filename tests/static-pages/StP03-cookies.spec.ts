@@ -1,0 +1,111 @@
+import { test, expect } from '@playwright/test';
+
+test('Terms of Use page', async ({ page }) => {
+    await page.goto('https://app.reflectivelearnings.com/vi/cookie-policy');
+    await expect(page.locator('body')).toMatchAriaSnapshot(`
+      - heading "📄 Văn Bản Chính Thức cho Trang Tùy Chọn Cookie EMBLEM" [level=1]
+      - heading "I. Giới Thiệu Chung và Tuyên Bố" [level=3]
+      - 'heading "Tiêu đề: Tùy Chọn Cookie của EMBLEM" [level=4]'
+      - paragraph:
+        - strong: "Mô tả:"
+        - text: Chào mừng đến với EMBLEM. Để cung cấp dịch vụ phân tích dữ liệu cá nhân và phát triển sự nghiệp tốt nhất cho bạn, chúng tôi cần sử dụng các công nghệ theo dõi (bao gồm cookie) để thu thập thông tin về cách bạn tương tác với ứng dụng.
+      - paragraph: Việc sử dụng các cookie này hoàn toàn dựa trên sự đồng ý tự nguyện của bạn và chỉ phục vụ mục đích cải thiện trải nghiệm sử dụng dịch vụ EMBLEM của bạn.
+      - paragraph:
+        - strong: "Quyền của bạn:"
+        - text: "Bạn có quyền: (i) được biết về hoạt động xử lý dữ liệu cá nhân; (ii) đồng ý hoặc không đồng ý cho phép xử lý dữ liệu; (iii) xem, chỉnh sửa dữ liệu cá nhân của mình; (iv) yêu cầu cung cấp, xóa, hạn chế xử lý dữ liệu; (v) gửi yêu cầu phản đối xử lý dữ liệu; (vi) rút lại sự đồng ý bất cứ lúc nào."
+      - paragraph:
+        - text: "**Chi tiết vui lòng xem thêm tại"
+        - link "Chính Sách Quyền Riêng Tư":
+          - /url: /privacy-policy
+        - text: "*"
+      - paragraph: Vui lòng điều chỉnh tùy chọn của bạn dưới đây để cho phép chúng tôi thu thập các thông tin cần thiết nhằm tối ưu hóa hành trình xây dựng bản sắc EMBLEM (Essence, Motivators, Brilliances, Limitations, Environment fit, Match) phù hợp với nhu cầu cá nhân của bạn.
+      - heading "II. Danh Mục Cookie Chi Tiết" [level=3]
+      - paragraph: (Sử dụng các nút gạt/toggle để người dùng bật/tắt, ngoại trừ mục 1)
+      - heading "1. ⚙️ Cookie Bắt Buộc (Strictly Necessary Cookies)" [level=4]
+      - table:
+        - rowgroup:
+          - row "Trạng thái Nút Gạt/Toggle":
+            - columnheader "Trạng thái"
+            - columnheader "Nút Gạt/Toggle"
+        - rowgroup:
+          - row "BẮT BUỘC Không Thể Tắt":
+            - cell "BẮT BUỘC"
+            - cell "Không Thể Tắt"
+      - paragraph:
+        - strong: "Mô tả:"
+        - text: Các cookie này là cần thiết để web app EMBLEM hoạt động cơ bản và bảo mật. Chúng cho phép bạn điều hướng, sử dụng các chức năng cốt lõi (như đăng nhập, quản lý phiên làm việc) và duy trì trạng thái của bạn khi di chuyển qua các bước phản tư hoặc đánh giá.
+      - paragraph: Không thể tắt các cookie này vì nếu không có chúng, ứng dụng sẽ không hoạt động an toàn và đúng cách.
+      - paragraph:
+        - strong: "Mục đích cụ thể:"
+        - text: Duy trì trạng thái đăng nhập và xác thực người dùng. Lưu trữ lựa chọn đồng ý cookie của bạn. Đảm bảo tính bảo mật khi bạn nhập dữ liệu cá nhân hoặc kết quả đánh giá (Assessments).
+      - heading "2. 📈 Cookie Hiệu Suất và Phân Tích (Performance & Analytics Cookies)" [level=4]
+      - table:
+        - rowgroup:
+          - row "Trạng thái Nút Gạt/Toggle":
+            - columnheader "Trạng thái"
+            - columnheader "Nút Gạt/Toggle"
+        - rowgroup:
+          - row "Tùy chọn [Mặc định Bật / Tắt]":
+            - cell "Tùy chọn"
+            - cell "[Mặc định Bật / Tắt]"
+      - paragraph:
+        - strong: "Mô tả:"
+        - text: Các cookie này hỗ trợ các chức năng cơ bản của web app EMBLEM như đăng nhập, quản lý phiên làm việc và bảo mật. Tuy nhiên, bạn hoàn toàn có quyền từ chối sử dụng các cookie này. Việc tắt các cookie này có thể ảnh hưởng đến một số tính năng của ứng dụng, nhưng bạn vẫn có thể sử dụng các chức năng cốt lõi của dịch vụ EMBLEM.
+      - paragraph:
+        - strong: "Mục đích cụ thể:"
+        - text: Hỗ trợ trạng thái đăng nhập và xác thực người dùng; Lưu trữ lựa chọn đồng ý cookie của bạn; Tăng cường tính bảo mật khi bạn sử dụng các tính năng đánh giá và phân tích.
+      - heading "3. ✨ Cookie Chức Năng (Functionality Cookies)" [level=4]
+      - table:
+        - rowgroup:
+          - row "Trạng thái Nút Gạt/Toggle":
+            - columnheader "Trạng thái"
+            - columnheader "Nút Gạt/Toggle"
+        - rowgroup:
+          - row "Tùy chọn [Mặc định Bật / Tắt]":
+            - cell "Tùy chọn"
+            - cell "[Mặc định Bật / Tắt]"
+      - paragraph:
+        - strong: "Mô tả:"
+        - text: "Những cookie này cho phép EMBLEM ghi nhớ các tùy chọn và lựa chọn cá nhân của bạn (ví dụ: ngôn ngữ, chế độ xem, tiến độ đã lưu). Điều này giúp cung cấp trải nghiệm cá nhân hóa hơn, duy trì trạng thái công việc của bạn, và tiết kiệm thời gian khi bạn quay lại ứng dụng."
+      - paragraph:
+        - strong: "Mục đích cụ thể:"
+        - text: "Lưu trữ tiến độ phản tư và kết quả tạm thời của EMBLEM chưa hoàn thành. Ghi nhớ các thiết lập hiển thị (ví dụ: màu sắc, cỡ chữ). Giữ lại thông tin đã nhập trước đó trong các trường dữ liệu để tiện cho việc chỉnh sửa Career Plan."
+      - heading "4. 🎯 Cookie Tiếp Thị và Cá Nhân Hóa (Targeting & Personalization Cookies)" [level=4]
+      - table:
+        - rowgroup:
+          - row "Trạng thái Nút Gạt/Toggle":
+            - columnheader "Trạng thái"
+            - columnheader "Nút Gạt/Toggle"
+        - rowgroup:
+          - row "Tùy chọn [Mặc định Bật / Tắt]":
+            - cell "Tùy chọn"
+            - cell "[Mặc định Bật / Tắt]"
+      - paragraph:
+        - strong: "Mô tả:"
+        - text: Các cookie này chỉ được EMBLEM sử dụng nội bộ để tạo ra trải nghiệm cá nhân hóa dựa trên sở thích và hành vi sử dụng dịch vụ của bạn. Chúng tôi cam kết không chia sẻ dữ liệu này với bất kỳ bên thứ ba nào. Mục đích là để hiển thị cho bạn nội dung, thông báo, hoặc đề xuất phù hợp với Essence, Motivators, và Career Plan của bạn chỉ trong phạm vi ứng dụng EMBLEM.
+      - paragraph:
+        - strong: "Mục đích cụ thể:"
+        - text: Cá nhân hóa các gợi ý Career Plan dựa trên kết quả EMBLEM của bạn; Cung cấp nội dung phù hợp với nhu cầu phát triển sự nghiệp đã được xác định; Tối ưu hóa trải nghiệm sử dụng dịch vụ trong hệ thống EMBLEM.
+      - heading "III. Thao Tác Cuối Cùng" [level=3]
+      - table:
+        - rowgroup:
+          - row "Nút Hành động":
+            - columnheader "Nút"
+            - columnheader "Hành động"
+        - rowgroup:
+          - row "Chấp nhận Tất Cả Cho phép sử dụng tất cả các loại cookie.":
+            - cell "Chấp nhận Tất Cả"
+            - cell "Cho phép sử dụng tất cả các loại cookie."
+          - row "Lưu Tùy Chọn Lưu các lựa chọn đã được điều chỉnh bằng nút gạt/toggle.":
+            - cell "Lưu Tùy Chọn"
+            - cell "Lưu các lựa chọn đã được điều chỉnh bằng nút gạt/toggle."
+          - row "Từ Chối Tất Cả Chỉ cho phép sử dụng Cookie Bắt Buộc (mục 1).":
+            - cell "Từ Chối Tất Cả"
+            - cell "Chỉ cho phép sử dụng Cookie Bắt Buộc (mục 1)."
+      - heading "IV. Thông Tin Bổ Sung" [level=3]
+      - paragraph:
+        - text: Để biết thêm chi tiết về cách chúng tôi xử lý dữ liệu cá nhân của bạn và các quyền của bạn, vui lòng tham khảo
+        - link "Chính Sách Quyền Riêng Tư đầy đủ của chúng tôi.":
+          - /url: /privacy-policy
+      `);
+})

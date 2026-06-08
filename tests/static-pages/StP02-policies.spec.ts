@@ -1,0 +1,219 @@
+import { test, expect } from '@playwright/test';
+
+test('Terms of Use page', async ({ page }) => {
+    await page.goto('https://app.reflectivelearnings.com/vi/privacy-policy');
+    await expect(page.locator('body')).toMatchAriaSnapshot(`
+      - heading "CHÍNH SÁCH BẢO VỆ DỮ LIỆU CÁ NHÂN (PRIVACY POLICY)" [level=1]
+      - paragraph: CÔNG TY TNHH REFLECTIVE LEARNINGS
+      - paragraph: (Áp dụng cho tất cả các nền tảng trực tuyến)
+      - paragraph: "/Ngày cập nhật cuối: Ngày \\\\d+ tháng \\\\d+ năm \\\\d+/"
+      - heading "1. PHẠM VI ÁP DỤNG VÀ CHẤP THUẬN TRÁCH NHIỆM" [level=3]
+      - paragraph: Chính sách này áp dụng cho tất cả các nền tảng trực tuyến của Công ty TNHH Reflective Learnings ("Công ty"), bao gồm website thương mại, sản phẩm ứng dụng, công cụ quản trị, cổng đánh giá, khảo sát, và các trang thương mại điện tử.
+      - paragraph:
+        - strong: "Chấp thuận và Trách nhiệm:"
+        - text: Bằng cách truy cập, đăng ký tài khoản và sử dụng Dịch vụ, bạn chấp nhận các quy tắc được mô tả trong Chính sách này và đồng ý hợp tác với Công ty trong việc bảo vệ dữ liệu cá nhân thông qua việc quản lý bảo mật mật khẩu cá nhân và cung cấp thông tin chính xác, đầy đủ. Công ty cam kết áp dụng các biện pháp kỹ thuật và tổ chức phù hợp để bảo vệ dữ liệu cá nhân của bạn theo quy định pháp luật.
+      - list:
+        - listitem:
+          - paragraph:
+            - strong: "Thông tin Công ty:"
+            - text: Công ty TNHH Reflective Learnings là
+            - strong: Bên Kiểm soát và Xử lý Dữ liệu Cá nhân
+            - text: của Dữ liệu Cá nhân được thu thập thông qua Dịch vụ.
+        - listitem:
+          - paragraph:
+            - strong: "Liên hệ Giải quyết Quyền:"
+            - text: "/Hotline \\\\d+ hoặc Email: contact@reflectivelearnings\\\\.com\\\\./"
+      - paragraph: Công ty có quyền thay đổi, điều chỉnh hoặc bổ sung Chính sách này khi thấy cần thiết. Mọi thay đổi đều sẽ được gửi thông báo đến người dùng thông qua email đã đăng ký hoặc thông báo trên nền tảng. Công ty sẽ yêu cầu sự đồng ý rõ ràng của người dùng đối với những thay đổi quan trọng về mục đích xử lý dữ liệu cá nhân đã được cung cấp
+      - separator
+      - heading "2. DỮ LIỆU ĐƯỢC THU THẬP VÀ NGUYÊN TẮC XỬ LÝ" [level=3]
+      - paragraph: Thông tin thu thập được sử dụng để cung cấp dịch vụ cốt lõi, cá nhân hóa và cải thiện trải nghiệm trực tuyến. Việc không cung cấp một số thông tin có thể giới hạn khả năng tận dụng đầy đủ các tính năng của Dịch vụ.
+      - heading "2.1. Phân loại Dữ liệu Thu thập" [level=4]
+      - table:
+        - rowgroup:
+          - row "Loại Dữ liệu Ví dụ và Mục đích":
+            - columnheader "Loại Dữ liệu"
+            - columnheader "Ví dụ và Mục đích"
+        - rowgroup:
+          - row "Dữ liệu Cá nhân Cơ bản Họ tên, Email, Số điện thoại, Địa chỉ, Thông tin đăng nhập. (Dùng để liên hệ, xác nhận đơn hàng, quản lý tài khoản).":
+            - rowheader "Dữ liệu Cá nhân Cơ bản"
+            - cell "Họ tên, Email, Số điện thoại, Địa chỉ, Thông tin đăng nhập. (Dùng để liên hệ, xác nhận đơn hàng, quản lý tài khoản)."
+          - row "Dữ liệu Cá nhân Nhạy cảm bao gồm Dữ liệu Bản sắc và Nội dung Riêng tư Thông tin khai báo về Điểm mạnh, Giá trị (theo mô hình EMBLEM), Nhật ký Cá nhân, các phản hồi trong bài đánh giá. (Dùng để phân tích, cá nhân hóa và gợi ý phát triển bản thân).":
+            - rowheader "Dữ liệu Cá nhân Nhạy cảm bao gồm Dữ liệu Bản sắc và Nội dung Riêng tư"
+            - cell "Thông tin khai báo về Điểm mạnh, Giá trị (theo mô hình EMBLEM), Nhật ký Cá nhân, các phản hồi trong bài đánh giá. (Dùng để phân tích, cá nhân hóa và gợi ý phát triển bản thân)."
+          - row "Dữ liệu Tự động Địa chỉ IP, ID thiết bị, loại trình duyệt, hệ điều hành, cookie, lịch sử mua hàng, luồng nhấp chuột URL (URL clickstream). (Dùng để cải thiện chất lượng dịch vụ và đảm bảo an toàn hệ thống).":
+            - rowheader "Dữ liệu Tự động"
+            - cell "Địa chỉ IP, ID thiết bị, loại trình duyệt, hệ điều hành, cookie, lịch sử mua hàng, luồng nhấp chuột URL (URL clickstream). (Dùng để cải thiện chất lượng dịch vụ và đảm bảo an toàn hệ thống)."
+          - row "Dữ liệu tương tác cho tính năng EMBLEM Match Danh sách người dùng đã \\"Match\\", lịch sử gửi lời mời kết nối, thời gian phản hồi. (Dùng để tối ưu hóa thuật toán hiển thị).":
+            - rowheader "Dữ liệu tương tác cho tính năng EMBLEM Match"
+            - cell "Danh sách người dùng đã \\"Match\\", lịch sử gửi lời mời kết nối, thời gian phản hồi. (Dùng để tối ưu hóa thuật toán hiển thị)."
+          - row "Dữ liệu Tin nhắn Nội dung trao đổi giữa hai người dùng được mã hóa và lưu trữ trên máy chủ bảo mật để RL truy cập vào khi có báo cáo vi phạm hoặc có yêu cầu từ cơ quan pháp luật.":
+            - rowheader "Dữ liệu Tin nhắn"
+            - cell "Nội dung trao đổi giữa hai người dùng được mã hóa và lưu trữ trên máy chủ bảo mật để RL truy cập vào khi có báo cáo vi phạm hoặc có yêu cầu từ cơ quan pháp luật."
+      - heading "2.2. Mục đích Xử lý Dữ liệu" [level=4]
+      - list:
+        - listitem:
+          - paragraph:
+            - strong: "Cung cấp Dịch vụ Cốt lõi:"
+            - text: Chấm điểm, phân tích, cá nhân hóa nội dung và đề xuất phát triển bản thân.
+        - listitem:
+          - paragraph:
+            - strong: "Hỗ trợ và Vận hành:"
+            - text: Xử lý thanh toán, thực hiện đơn hàng, giải quyết các vấn đề kỹ thuật và thông báo về các dịch vụ mới.
+        - listitem:
+          - paragraph:
+            - strong: "Cải tiến và Nghiên cứu:"
+            - text: Sử dụng kết quả đánh giá, thông tin nhân khẩu học và các dữ liệu tổng hợp (dưới dạng
+            - strong: ẩn danh
+            - text: ", không nhận dạng cá nhân) cho mục đích nghiên cứu khoa học, đào tạo và cải tiến chất lượng thuật toán."
+        - listitem:
+          - paragraph:
+            - strong: "Vận hành tính năng kết nối:"
+            - text: Hiển thị hồ sơ của người dùng cho những người có sự tương đồng về bản sắc sự nghiệp với thông tin cơ bản như Tên, Ảnh đại diện, Hồ sơ Bản sắc cá nhân EMBLEM, thông tin liên hệ sẽ được khách hàng tùy chọn hiển thị. Các nhật ký và dữ liệu nhạy cảm khác sẽ không được hiển thị cho đối phương trừ khi người dùng chủ động chia sẻ trong tin nhắn.
+        - listitem:
+          - paragraph:
+            - strong: "Tối ưu thuật toán:"
+            - text: Phân tích hành vi tương tác để gợi ý những người có khả năng hỗ trợ người dùng tốt nhất.
+        - listitem:
+          - paragraph:
+            - strong: "Bảo vệ cộng đồng:"
+            - text: Kiểm soát và ngăn chặn các hành vi quấy rối, lừa đảo thông qua dữ liệu báo cáo (Report).
+      - heading "2.3. Nguyên tắc Xử lý và Trách nhiệm Dữ liệu" [level=4]
+      - list:
+        - listitem:
+          - paragraph:
+            - strong: "Đồng ý:"
+            - text: Mọi hoạt động xử lý Dữ liệu Cá nhân và
+            - strong: Dữ liệu Bản sắc và Nội dung Riêng tư
+            - text: đều dựa trên
+            - strong: Sự Đồng ý Rõ Ràng
+            - text: của Chủ thể Dữ liệu.
+        - listitem:
+          - paragraph:
+            - strong: "Trách nhiệm của Người Dùng:"
+            - text: Người Tiêu Dùng hoàn toàn chịu trách nhiệm về
+            - strong: tính chính xác, tính đầy đủ và tính hợp pháp
+            - text: của tất cả Dữ liệu Cá nhân và
+            - strong: Dữ liệu Bản sắc và Nội dung Riêng tư
+            - text: mà bạn cung cấp.
+      - separator
+      - heading "3. THỜI GIAN LƯU TRỮ VÀ CHUYỂN GIAO DỮ LIỆU" [level=3]
+      - list:
+        - listitem:
+          - paragraph:
+            - strong: "Lưu trữ:"
+            - text: Dữ liệu cá nhân được lưu trữ bảo mật trong suốt thời gian Người Tiêu Dùng duy trì tài khoản.
+        - listitem:
+          - paragraph:
+            - strong: "Xóa bỏ:"
+            - text: Khi Người Tiêu Dùng yêu cầu xóa tài khoản, chúng tôi sẽ tiến hành
+            - strong: xóa vĩnh viễn
+            - text: toàn bộ Dữ liệu Cá nhân và Dữ liệu Bản sắc/Nội dung Riêng tư khỏi hệ thống sản xuất và sao lưu theo quy định, trừ khi việc lưu trữ là nghĩa vụ pháp lý.
+        - listitem:
+          - paragraph:
+            - strong: "Chuyển giao Quốc tế:"
+            - text: "Công ty chỉ thực hiện chuyển giao dữ liệu cá nhân ra nước ngoài khi có sự đồng ý rõ ràng của bạn cho từng trường hợp cụ thể và tuân thủ đầy đủ các quy định pháp luật Việt Nam. Trước khi thực hiện chuyển giao, Công ty sẽ thông báo chi tiết về: (i) loại dữ liệu được chuyển; (ii) quốc gia/tổ chức nhận dữ liệu; (iii) mục đích chuyển giao; (iv) thời gian lưu trữ; và (v) các biện pháp bảo vệ dữ liệu. Bạn có quyền từ chối việc chuyển giao mà không ảnh hưởng đến các dịch vụ cốt lõi khác."
+      - separator
+      - heading "4. CAM KẾT VỀ BẢO VỆ VÀ CHIA SẺ DỮ LIỆU" [level=3]
+      - heading "4.1. Cam kết Bảo vệ Dữ liệu" [level=4]
+      - paragraph: Công ty TNHH Reflective Learnings cam kết bảo vệ dữ liệu cá nhân của bạn theo tiêu chuẩn quản lý ngành và TUYỆT ĐỐI không bán, cho thuê, hoặc chuyển giao Dữ liệu Cá nhân của bạn cho bất kỳ bên thứ ba nào vì mục đích tiếp thị hoặc quảng cáo thương mại.
+      - heading "4.2. Phạm vi Chia sẻ Dữ liệu Ngoại lệ" [level=4]
+      - paragraph: "Dữ liệu chỉ được chia sẻ trong các trường hợp sau:"
+      - list:
+        - listitem:
+          - paragraph:
+            - strong: "Bên Xử lý Phụ và Đối tác Dịch vụ:"
+            - text: Được chia sẻ với các nhà cung cấp dịch vụ bên ngoài (hosting, hỗ trợ kỹ thuật, xử lý thanh toán) để
+            - strong: hoàn thành các mục đích đã thu thập
+            - text: thông tin đó. Các bên thứ ba này được
+            - strong: yêu cầu theo hợp đồng phải duy trì tính bảo mật
+            - text: và bị cấm sử dụng thông tin cho bất kỳ mục đích nào khác.
+        - listitem:
+          - paragraph:
+            - strong: "Giấy phép Site (Site License):"
+            - text: Trong trường hợp bạn sử dụng Dịch vụ thông qua Giấy phép Site, quản trị viên Giấy phép Site của bạn sẽ có quyền truy cập vào kết quả đánh giá và thông tin nhân khẩu học của bạn.
+        - listitem:
+          - paragraph:
+            - strong: "Yêu cầu Pháp luật và Bảo vệ Hệ thống:"
+            - text: Khi có yêu cầu bằng văn bản của cơ quan Nhà nước có thẩm quyền theo đúng thủ tục pháp luật, bao gồm các yêu cầu liên quan đến an ninh quốc gia, trật tự an toàn xã hội, hoặc điều tra tội phạm. Công ty sẽ thông báo cho chủ thể dữ liệu về việc cung cấp thông tin này trừ khi pháp luật cấm thông báo
+        - listitem:
+          - paragraph:
+            - strong: "Chuyển giao Kinh doanh:"
+            - text: Liên quan đến việc bán hoặc sáp nhập hoạt động kinh doanh của Công ty.
+      - heading "4.3. Biện pháp Bảo mật và Quản lý Tiêu chuẩn" [level=4]
+      - paragraph:
+        - text: Công ty áp dụng các biện pháp bảo mật kỹ thuật và tổ chức
+        - strong: tiêu chuẩn ngành
+        - text: "để bảo vệ dữ liệu khỏi sự truy cập, sử dụng hoặc tiết lộ trái phép:"
+      - list:
+        - listitem:
+          - paragraph:
+            - strong: "Mã hóa Truyền tải:"
+            - text: Sử dụng công nghệ tiêu chuẩn để mã hóa thông tin bạn nhập trên các trang được bảo vệ.
+        - listitem:
+          - paragraph:
+            - strong: "Bảo mật Dữ liệu:"
+            - text: Dữ liệu Bản sắc và Nội dung Riêng tư được mã hóa hoặc giả danh hóa khi lưu trữ.
+        - listitem:
+          - paragraph:
+            - strong: "Bảo vệ Thanh toán:"
+            - text: Tất cả các giao dịch thanh toán được xử lý thông qua cổng thanh toán.
+            - strong: Thông tin thẻ tín dụng không được lưu trữ hoặc xử lý trên máy chủ của chúng tôi.
+        - listitem:
+          - paragraph:
+            - strong: "Quản lý Truy cập:"
+            - text: Giới hạn chặt chẽ quyền truy cập của nhân viên nội bộ vào Dữ liệu Bản sắc và Nội dung Riêng tư. Điều quan trọng là bạn phải tự bảo vệ mật khẩu và máy tính của mình khỏi truy cập trái phép.
+      - separator
+      - heading "5. QUYỀN VÀ CƠ CHẾ THỰC HIỆN QUYỀN CỦA NGƯỜI TIÊU DÙNG" [level=3]
+      - paragraph: /Người Tiêu Dùng có các quyền theo Nghị định \\d+\\/\\d+\\/NĐ-CP và có thể thực hiện thông qua liên hệ trực tiếp với Cán bộ Phụ trách Dữ liệu của Công ty:/
+      - list:
+        - listitem:
+          - paragraph:
+            - strong: "Quyền Rút lại Đồng ý:"
+            - text: Yêu cầu rút lại sự đồng ý đã cấp bất kỳ lúc nào.
+        - listitem:
+          - paragraph:
+            - strong: "Quyền Xóa bỏ:"
+            - text: Yêu cầu xóa tài khoản và toàn bộ Dữ liệu Cá nhân đã cung cấp.
+        - listitem:
+          - paragraph:
+            - strong: "Quyền Truy cập & Chỉnh sửa:"
+            - text: Yêu cầu xem xét và chỉnh sửa Dữ liệu Cá nhân của mình.
+        - listitem:
+          - paragraph:
+            - strong: "Quyền được Biết:"
+            - text: Yêu cầu biết về hoạt động xử lý dữ liệu cá nhân của mình.
+        - listitem:
+          - paragraph:
+            - strong: "Quyền Hạn chế Xử lý Dữ liệu:"
+            - text: Yêu cầu hạn chế xử lý dữ liệu cá nhân của mình
+        - listitem:
+          - paragraph:
+            - strong: "Quyền phản đối xử lý dữ liệu cá nhân:"
+            - text: Gửi yêu cầu phản đối xử lý dữ liệu cá nhân.
+        - listitem:
+          - paragraph:
+            - strong: "Quyền khiếu nại, tố cáo, khởi kiện, yêu cầu bồi thường thiệt hại:"
+            - text: Khiếu nại, tố cáo, khởi kiện, yêu cầu bồi thường thiệt hại theo quy định của pháp luật;
+      - paragraph: Chúng tôi cam kết xử lý các yêu cầu hợp lệ này trong vòng một khung thời gian hợp lý kể từ khi xác nhận thông tin.
+      - separator
+      - heading "6. QUY ĐỊNH KHÁC" [level=3]
+      - list:
+        - listitem:
+          - paragraph:
+            - strong: "Trẻ em:"
+            - text: /Dịch vụ không hướng đến trẻ em hoặc bất kỳ ai dưới \\d+ tuổi\\. Nếu bạn dưới \\d+ tuổi, bạn chỉ được sử dụng các nền tảng trực tuyến dưới sự tham gia của cha mẹ hoặc người giám hộ\\./
+        - listitem:
+          - paragraph:
+            - strong: "Cơ chế Khiếu nại và Vi phạm Dữ liệu:"
+            - text: Mọi khiếu nại hoặc thông báo vi phạm dữ liệu phải được gửi đến
+            - strong: /Hotline \\d+/
+            - text: . Trong trường hợp xảy ra Vi phạm Dữ liệu Cá nhân, chúng tôi sẽ thông báo cho
+            - strong: Cục An ninh mạng và Phòng, chống tội phạm công nghệ cao (A05 - Bộ Công an)
+            - text: và Chủ thể Dữ liệu bị ảnh hưởng trong vòng
+            - strong: /\\d+ giờ/
+            - text: kể từ khi phát hiện vi phạm.
+      - separator
+      - heading "CẬP NHẬT CHÍNH SÁCH" [level=3]
+      - paragraph: Công ty bảo lưu quyền thay đổi các điều khoản của Chính sách Bảo vệ Dữ liệu Cá nhân này theo thời gian và khuyến khích bạn định kỳ xem xét Chính sách này để biết về bất kỳ thay đổi hoặc cập nhật nào.
+      `);
+})

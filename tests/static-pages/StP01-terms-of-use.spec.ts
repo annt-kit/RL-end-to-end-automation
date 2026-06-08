@@ -1,0 +1,232 @@
+import { test, expect } from '@playwright/test';
+
+test('Terms of Use page', async ({ page }) => {
+
+    await page.goto('https://app.reflectivelearnings.com/vi/terms-of-use');
+
+
+    await expect(page.locator('body')).toMatchAriaSnapshot(`
+      - heading "ĐIỀU KHOẢN DỊCH VỤ VÀ SẢN PHẨM" [level=1]
+      - paragraph: CÔNG TY TNHH REFLECTIVE LEARNINGS
+      - paragraph: "/Ngày cập nhật cuối: Ngày \\\\d+ tháng \\\\d+ năm \\\\d+/"
+      - heading "1. CHẤP THUẬN ĐIỀU KHOẢN VÀ HIỆU LỰC" [level=3]
+      - paragraph: Bằng việc truy cập, đăng ký tài khoản và sử dụng các sản phẩm hoặc dịch vụ của Reflective Learnings (gọi chung là "Dịch vụ"), bạn đồng ý bị ràng buộc bởi các điều khoản và điều kiện của Thỏa thuận này. Thỏa thuận này có hiệu lực trong "Thời hạn" được quy định tại thời điểm đăng ký dịch vụ của bạn. Dịch vụ sẽ tiếp tục được cung cấp theo chu kỳ đăng ký cho đến khi có thông báo chấm dứt hợp lệ từ một trong hai bên.
+      - paragraph: /Công ty có quyền sửa đổi hoặc cập nhật các Điều khoản Dịch vụ này khi có lý do chính đáng và sẽ thông báo trước cho Khách hàng ít nhất ba mươi \\(\\d+\\) ngày thông qua email đã đăng ký hoặc thông báo trên trang web chính thức\\. Các điều khoản sửa đổi sẽ có hiệu lực sau thời hạn thông báo trên\\. Khách hàng có quyền chấm dứt sử dụng dịch vụ nếu không đồng ý với các điều khoản sửa đổi mà không phải chịu bất kỳ khoản phí nào cho phần dịch vụ chưa sử dụng\\. Việc tiếp tục sử dụng Dịch vụ sau khi các thay đổi có hiệu lực đồng nghĩa với việc Khách hàng chấp nhận các điều khoản đã sửa đổi\\./
+      - separator
+      - heading "2. QUY ĐỊNH CHUNG VỀ SỬ DỤNG VÀ CHẤM DỨT DỊCH VỤ" [level=3]
+      - heading "2.1. Quyền Chấm dứt của Công ty" [level=4]
+      - list:
+        - listitem: "/Công ty có quyền tạm ngừng hoặc chấm dứt Thỏa thuận\\\\/Tài khoản của Khách hàng trong các trường hợp sau, với điều kiện đã thông báo bằng văn bản cho Khách hàng ít nhất bảy \\\\(7\\\\) ngày làm việc trước khi thực hiện biện pháp chấm dứt: \\\\(a\\\\) Khách hàng vi phạm nghiêm trọng Chính sách Bảo vệ Dữ liệu Cá nhân hoặc Quy tắc Ứng xử \\\\(Mục 6\\\\.1\\\\) và không khắc phục sau khi được thông báo; \\\\(b\\\\) Khách hàng không phản hồi các yêu cầu công việc hoặc hỗ trợ cần thiết trong mười lăm \\\\(\\\\d+\\\\) ngày làm việc kể từ khi nhận được thông báo bằng văn bản; \\\\(c\\\\) Khách hàng có hơn hai \\\\(2\\\\) hóa đơn chưa thanh toán quá mười lăm \\\\(\\\\d+\\\\) ngày kể từ ngày đáo hạn; \\\\(d\\\\) Khách hàng vi phạm Mục 3 về Quyền Sở hữu Trí tuệ và không chấm dứt hành vi vi phạm sau khi được thông báo\\\\./"
+      - heading "2.2. Chấm dứt Sớm Dịch vụ và Trách nhiệm Thanh toán" [level=4]
+      - list:
+        - listitem:
+          - strong: "Chấm dứt Hợp đồng:"
+          - text: Khách hàng có thể chấm dứt thỏa thuận này bằng cách thông báo bằng văn bản cho Công ty ít nhất một (1) tháng trước khi hết "Thời hạn" hợp đồng.
+        - listitem:
+          - strong: "Trách nhiệm Thanh toán khi Chấm dứt Sớm:"
+          - text: "/Trong trường hợp Khách hàng đơn phương chấm dứt dịch vụ trước thời hạn hợp đồng đã cam kết, Khách hàng có trách nhiệm: \\\\(a\\\\) Thanh toán đầy đủ phí dịch vụ cho phần đã sử dụng tính đến thời điểm chấm dứt; \\\\(b\\\\) Thanh toán phí chấm dứt sớm tương đương với hai mươi phần trăm \\\\(\\\\d+%\\\\) tổng giá trị hợp đồng còn lại, nhưng không vượt quá ba \\\\(3\\\\) tháng phí dịch vụ; \\\\(c\\\\) Hoàn trả bất kỳ khoản ưu đãi, giảm giá đã nhận được tương ứng với phần dịch vụ chưa sử dụng\\\\./"
+      - heading "2.3. Hỗ trợ Kỹ thuật" [level=4]
+      - paragraph: "Tất cả hỗ trợ kỹ thuật liên quan đến các chương trình và Dịch vụ sẽ được thực hiện độc quyền thông qua các kênh chính thức của Công ty (ví dụ: email hỗ trợ, hệ thống ticket) theo quy định của Công ty tại từng thời điểm."
+      - separator
+      - heading "3. QUYỀN SỞ HỮU TRÍ TUỆ (IP)" [level=3]
+      - paragraph: Tất cả Nội dung, Công cụ, Mô hình EMBLEM, công thức phân tích và tài liệu liên quan là tài sản độc quyền của Công ty TNHH Reflective Learnings.
+      - list:
+        - listitem:
+          - strong: "Quyền Sở hữu Kết quả:"
+          - text: Cá nhân tham gia bài đánh giá/khai thác bản sắc cá nhân sở hữu kết quả của mình. Tuy nhiên, quyền sở hữu đối với cấu trúc, thuật toán và tên gọi mô hình EMBLEM vẫn thuộc về Công ty.
+        - listitem:
+          - strong: "Quyền Sử dụng Có giới hạn:"
+          - text: Khách hàng chỉ có quyền sử dụng Dịch vụ một cách giới hạn, không độc quyền, và quyền sử dụng này có thể bị Công ty thu hồi ngay lập tức nếu Khách hàng vi phạm các Điều khoản và Điều kiện sử dụng này.
+        - listitem:
+          - strong: "Hành vi Nghiêm cấm IP:"
+          - text: Khách hàng bị nghiêm cấm sao chép, đăng ký, hoặc sử dụng bất kỳ tài sản trí tuệ nào của Công ty (bao gồm tên thương hiệu, mô hình) trong tên miền, tên công ty, hoặc bất kỳ hình thức nào khác nhằm mục đích gây nhầm lẫn hoặc cạnh tranh.
+      - separator
+      - heading "4. PHÍ DỊCH VỤ, THANH TOÁN VÀ HOÀN TIỀN" [level=3]
+      - list:
+        - listitem:
+          - strong: "Thời hạn Thanh toán:"
+          - text: Khách hàng phải thanh toán các hóa đơn tiếp theo trong vòng bảy (7) ngày kể từ ngày nhận được.
+        - listitem:
+          - strong: "Phí Chậm Trễ:"
+          - text: /Công ty có quyền tính phí chậm thanh toán một phần năm phần trăm \\(1\\.5%\\) mỗi tháng trên số dư chưa thanh toán, tương đương mười tám phần trăm \\(\\d+%\\) mỗi năm, kể từ ngày đáo hạn cho đến ngày thanh toán đầy đủ\\./
+        - listitem:
+          - strong: "Chính sách Hoàn trả:"
+          - text: (a) Đối với dịch vụ đã được cung cấp đúng cam kết và Khách hàng đã sử dụng, không có khoản hoàn trả nào được thực hiện; (b) Trong trường hợp dịch vụ không được cung cấp đúng cam kết hoặc có lỗi kỹ thuật do Công ty, Khách hàng có quyền yêu cầu Công ty khắc phục, cung cấp lại dịch vụ hoặc hoàn trả phần phí tương ứng với dịch vụ bị lỗi; (c) Khách hàng có quyền được hoàn trả phí dịch vụ chưa sử dụng khi Công ty đơn phương chấm dứt hợp đồng không do lỗi của Khách hàng.
+      - separator
+      - heading "5. TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM VÀ GIỚI HẠN NGHĨA VỤ" [level=3]
+      - heading "5.1. Vai trò Tư vấn và Giới hạn Nghĩa vụ của Công ty" [level=4]
+      - list:
+        - listitem:
+          - strong: "Vai trò Tư vấn:"
+          - text: Công ty TNHH Reflective Learnings (RL) chỉ giữ vai trò là công cụ tư vấn, gợi ý và cung cấp kết quả phân tích dựa trên thông tin mà Người Tiêu Dùng cung cấp.
+        - listitem:
+          - strong: "Không chịu Trách nhiệm về Quyết định:"
+          - text: RL không chịu trách nhiệm về bất kỳ thiệt hại hoặc hậu quả nào phát sinh từ mọi quyết định được đưa ra sau khi tham khảo kết quả phân tích và gợi ý từ Dịch vụ. Người Tiêu Dùng hoàn toàn chịu trách nhiệm về quyết định của mình.
+        - listitem:
+          - strong: "Khuyến nghị Chuyên môn:"
+          - text: Người Tiêu Dùng nên tự quyết định và tìm kiếm lời khuyên từ các chuyên gia có chuyên môn (như cố vấn tài chính, chuyên gia sức khỏe, v.v.) đối với các quyết định quan trọng trong cuộc sống hoặc nghề nghiệp.
+        - listitem:
+          - strong: "Không phải Công cụ Đánh giá Tâm lý/Tuyển dụng:"
+          - text: Dịch vụ không phải là công cụ đánh giá lâm sàng (tâm lý) và kết quả được cung cấp không phải là thước đo sức khỏe tâm lý. Nghiêm cấm sử dụng Dịch vụ cho mục đích tuyển dụng, thăng chức, hoặc đánh giá nhân sự.
+      - heading "5.2. Trách nhiệm về Dữ liệu Người Dùng" [level=4]
+      - list:
+        - listitem: Người Tiêu Dùng hoàn toàn chịu trách nhiệm về tính chính xác, tính hợp pháp của tất cả Dữ liệu Cá nhân, công việc, dữ liệu EMBLEM, các Nhật ký, Thành quả, Bài học, và Khoảnh khắc mà Người Tiêu Dùng tự chia sẻ và tải lên Ứng dụng/Website.
+        - listitem: RL không chịu trách nhiệm xác minh độ chính xác, đầy đủ hay tính xác thực của bất kỳ dữ liệu nào do Người Tiêu Dùng cung cấp.
+      - heading "5.3. Giới hạn Trách nhiệm Chung" [level=4]
+      - list:
+        - listitem: "/Công ty sẽ không chịu trách nhiệm bồi thường cho các thiệt hại gián tiếp, đặc biệt, ngẫu nhiên hoặc do hậu quả phát sinh từ: \\\\(a\\\\) Việc Khách hàng sử dụng sai mục đích hoặc không tuân thủ hướng dẫn sử dụng của Công ty; \\\\(b\\\\) Quyết định kinh doanh hoặc cá nhân của Khách hàng dựa trên kết quả dịch vụ mà không tham khảo ý kiến chuyên gia; \\\\(c\\\\) Dữ liệu không chính xác do Khách hàng cung cấp; \\\\(d\\\\) Các sự kiện Bất Khả Kháng \\\\(thiên tai, chiến tranh, dịch bệnh, sự cố hạ tầng Internet\\\\)\\\\. Tổng mức bồi thường tối đa của Công ty trong mọi trường hợp không vượt quá tổng số tiền Khách hàng đã thanh toán cho dịch vụ trong mười hai \\\\(\\\\d+\\\\) tháng gần nhất\\\\./"
+      - separator
+      - heading "6. ĐIỀU KHOẢN RIÊNG CHO TÍNH NĂNG EMBLEM MATCH" [level=3]
+      - paragraph: "Tính năng EMBLEM Match cho phép người dùng kết nối dựa trên sự tương đồng về bản sắc sự nghiệp. Khi kích hoạt tính năng này, khách hàng đồng ý với các quy định sau:"
+      - heading "6.1. Quyền Riêng tư và Hiển thị" [level=4]
+      - list:
+        - listitem: Khách hàng chỉ xuất hiện trong danh sách EMBLEM Match khi chủ động bật tính năng này. Hệ thống sẽ chỉ hiển thị mặc định các thông tin cơ bản như Tên, Ảnh đại diện, Hồ sơ Bản sắc cá nhân EMBLEM, thông tin liên hệ sẽ được khách hàng tùy chọn hiển thị. Các nhật ký và dữ liệu nhạy cảm khác sẽ không được hiển thị cho đối phương trừ khi khách hàng chủ động chia sẻ trong tin nhắn.
+      - heading "6.2. Quy tắc ứng xử" [level=4]
+      - list:
+        - listitem:
+          - strong: "Mục đích kết nối:"
+          - text: Trao đổi về sự nghiệp và phát triển bản sắc.
+        - listitem:
+          - strong: "Nghiêm cấm:"
+          - text: Quấy rối, gạ gẫm hẹn hò, quảng cáo đa cấp/tài chính, hoặc sử dụng ngôn từ thù ghét.
+        - listitem:
+          - strong: "Bảo mật đối phương:"
+          - text: Khách hàng có trách nhiệm bảo mật thông tin mà đối phương chia sẻ trong quá trình tương tác. Nghiêm cấm chụp màn hình nội dung trò chuyện để đăng tải công khai khi chưa có sự đồng ý.
+      - heading "6.3. An toàn Tương tác Ngoài đời thực" [level=4]
+      - list:
+        - listitem: Reflective Learnings không thực hiện xác minh lý lịch tư pháp của người dùng.
+        - listitem: Chúng tôi khuyến cáo khách hàng cực kỳ thận trọng khi gặp mặt trực tiếp. Mọi cuộc gặp ngoài ứng dụng là quyết định cá nhân; Công ty miễn trừ toàn bộ trách nhiệm đối với các rủi ro phát sinh từ các cuộc gặp này.
+      - heading "6.4. Quyền Báo cáo (Report)" [level=4]
+      - list:
+        - listitem: Công ty có quyền khóa tính năng EMBLEM Match hoặc xóa tài khoản vĩnh viễn của người dùng bị báo cáo vi phạm tiêu chuẩn cộng đồng.
+      - separator
+      - heading "7. CAM KẾT VÀ QUY TẮC ỨNG XỬ" [level=3]
+      - heading "7.1. Quy tắc Ứng xử Chuyên nghiệp" [level=4]
+      - paragraph: "Nếu sử dụng Nội dung cho mục đích huấn luyện/tư vấn (ví dụ: Huấn luyện viên), bạn phải tuân thủ các quy tắc ứng xử chuyên nghiệp, bao gồm việc không đưa ra tuyên bố sai lệch về dịch vụ của Công ty và phải tôn trọng tính bảo mật của thông tin khách hàng."
+      - heading "7.2. Chính sách Chống Tuyển dụng" [level=4]
+      - paragraph: "Bảo vệ Thông tin Kinh doanh: Khách hàng cam kết bảo mật các thông tin kinh doanh, kỹ thuật, danh sách khách hàng và nhân viên của Công ty mà Khách hàng tiếp cận được trong quá trình sử dụng dịch vụ. Khách hàng không được sử dụng các thông tin này cho mục đích cạnh tranh hoặc gây bất lợi cho Công ty trong thời hạn hai (2) năm kể từ khi chấm dứt dịch vụ."
+      - heading "7.3. Trách nhiệm Bồi thường (Indemnification)" [level=4]
+      - paragraph: "Trách nhiệm Bồi thường: Khách hàng đồng ý bồi thường cho Công ty những thiệt hại thực tế, trực tiếp và có thể chứng minh được phát sinh từ: (a) Việc Khách hàng vi phạm nghiêm trọng các điều khoản của Thỏa thuận này; (b) Việc Khách hàng vi phạm quyền sở hữu trí tuệ của bên thứ ba khi sử dụng dịch vụ; (c) Hành vi gian lận, cố ý gây thiệt hại của Khách hàng. Trách nhiệm bồi thường này không áp dụng nếu thiệt hại phát sinh một phần do lỗi của Công ty."
+      - separator
+      - heading "8. LUẬT ÁP DỤNG VÀ GIẢI QUYẾT TRANH CHẤP" [level=3]
+      - list:
+        - listitem:
+          - strong: "Luật Điều chỉnh:"
+          - text: Thỏa thuận này được điều chỉnh và giải thích theo luật pháp của nước Cộng hòa Xã hội Chủ nghĩa Việt Nam.
+        - listitem:
+          - strong: "Giải quyết Tranh chấp:"
+          - text: Mọi tranh chấp sẽ được giải quyết trước hết thông qua thương lượng thiện chí. Nếu không đạt được thỏa thuận, tranh chấp sẽ được đưa ra giải quyết tại Trung tâm Trọng tài Thương mại Thành phố Hồ Chí Minh (Tracent) theo quy tắc tố tụng của Tracent.
+      `);
+    await expect(page.locator('body')).toMatchAriaSnapshot(`
+      - heading "ĐIỀU KHOẢN DỊCH VỤ VÀ SẢN PHẨM" [level=1]
+      - paragraph: CÔNG TY TNHH REFLECTIVE LEARNINGS
+      - paragraph: "/Ngày cập nhật cuối: Ngày \\\\d+ tháng \\\\d+ năm \\\\d+/"
+      - heading "1. CHẤP THUẬN ĐIỀU KHOẢN VÀ HIỆU LỰC" [level=3]
+      - paragraph: Bằng việc truy cập, đăng ký tài khoản và sử dụng các sản phẩm hoặc dịch vụ của Reflective Learnings (gọi chung là "Dịch vụ"), bạn đồng ý bị ràng buộc bởi các điều khoản và điều kiện của Thỏa thuận này. Thỏa thuận này có hiệu lực trong "Thời hạn" được quy định tại thời điểm đăng ký dịch vụ của bạn. Dịch vụ sẽ tiếp tục được cung cấp theo chu kỳ đăng ký cho đến khi có thông báo chấm dứt hợp lệ từ một trong hai bên.
+      - paragraph: /Công ty có quyền sửa đổi hoặc cập nhật các Điều khoản Dịch vụ này khi có lý do chính đáng và sẽ thông báo trước cho Khách hàng ít nhất ba mươi \\(\\d+\\) ngày thông qua email đã đăng ký hoặc thông báo trên trang web chính thức\\. Các điều khoản sửa đổi sẽ có hiệu lực sau thời hạn thông báo trên\\. Khách hàng có quyền chấm dứt sử dụng dịch vụ nếu không đồng ý với các điều khoản sửa đổi mà không phải chịu bất kỳ khoản phí nào cho phần dịch vụ chưa sử dụng\\. Việc tiếp tục sử dụng Dịch vụ sau khi các thay đổi có hiệu lực đồng nghĩa với việc Khách hàng chấp nhận các điều khoản đã sửa đổi\\./
+      - separator
+      - heading "2. QUY ĐỊNH CHUNG VỀ SỬ DỤNG VÀ CHẤM DỨT DỊCH VỤ" [level=3]
+      - heading "2.1. Quyền Chấm dứt của Công ty" [level=4]
+      - list:
+        - listitem: "/Công ty có quyền tạm ngừng hoặc chấm dứt Thỏa thuận\\\\/Tài khoản của Khách hàng trong các trường hợp sau, với điều kiện đã thông báo bằng văn bản cho Khách hàng ít nhất bảy \\\\(7\\\\) ngày làm việc trước khi thực hiện biện pháp chấm dứt: \\\\(a\\\\) Khách hàng vi phạm nghiêm trọng Chính sách Bảo vệ Dữ liệu Cá nhân hoặc Quy tắc Ứng xử \\\\(Mục 6\\\\.1\\\\) và không khắc phục sau khi được thông báo; \\\\(b\\\\) Khách hàng không phản hồi các yêu cầu công việc hoặc hỗ trợ cần thiết trong mười lăm \\\\(\\\\d+\\\\) ngày làm việc kể từ khi nhận được thông báo bằng văn bản; \\\\(c\\\\) Khách hàng có hơn hai \\\\(2\\\\) hóa đơn chưa thanh toán quá mười lăm \\\\(\\\\d+\\\\) ngày kể từ ngày đáo hạn; \\\\(d\\\\) Khách hàng vi phạm Mục 3 về Quyền Sở hữu Trí tuệ và không chấm dứt hành vi vi phạm sau khi được thông báo\\\\./"
+      - heading "2.2. Chấm dứt Sớm Dịch vụ và Trách nhiệm Thanh toán" [level=4]
+      - list:
+        - listitem:
+          - strong: "Chấm dứt Hợp đồng:"
+          - text: Khách hàng có thể chấm dứt thỏa thuận này bằng cách thông báo bằng văn bản cho Công ty ít nhất một (1) tháng trước khi hết "Thời hạn" hợp đồng.
+        - listitem:
+          - strong: "Trách nhiệm Thanh toán khi Chấm dứt Sớm:"
+          - text: "/Trong trường hợp Khách hàng đơn phương chấm dứt dịch vụ trước thời hạn hợp đồng đã cam kết, Khách hàng có trách nhiệm: \\\\(a\\\\) Thanh toán đầy đủ phí dịch vụ cho phần đã sử dụng tính đến thời điểm chấm dứt; \\\\(b\\\\) Thanh toán phí chấm dứt sớm tương đương với hai mươi phần trăm \\\\(\\\\d+%\\\\) tổng giá trị hợp đồng còn lại, nhưng không vượt quá ba \\\\(3\\\\) tháng phí dịch vụ; \\\\(c\\\\) Hoàn trả bất kỳ khoản ưu đãi, giảm giá đã nhận được tương ứng với phần dịch vụ chưa sử dụng\\\\./"
+      - heading "2.3. Hỗ trợ Kỹ thuật" [level=4]
+      - paragraph: "Tất cả hỗ trợ kỹ thuật liên quan đến các chương trình và Dịch vụ sẽ được thực hiện độc quyền thông qua các kênh chính thức của Công ty (ví dụ: email hỗ trợ, hệ thống ticket) theo quy định của Công ty tại từng thời điểm."
+      - separator
+      - heading "3. QUYỀN SỞ HỮU TRÍ TUỆ (IP)" [level=3]
+      - paragraph: Tất cả Nội dung, Công cụ, Mô hình EMBLEM, công thức phân tích và tài liệu liên quan là tài sản độc quyền của Công ty TNHH Reflective Learnings.
+      - list:
+        - listitem:
+          - strong: "Quyền Sở hữu Kết quả:"
+          - text: Cá nhân tham gia bài đánh giá/khai thác bản sắc cá nhân sở hữu kết quả của mình. Tuy nhiên, quyền sở hữu đối với cấu trúc, thuật toán và tên gọi mô hình EMBLEM vẫn thuộc về Công ty.
+        - listitem:
+          - strong: "Quyền Sử dụng Có giới hạn:"
+          - text: Khách hàng chỉ có quyền sử dụng Dịch vụ một cách giới hạn, không độc quyền, và quyền sử dụng này có thể bị Công ty thu hồi ngay lập tức nếu Khách hàng vi phạm các Điều khoản và Điều kiện sử dụng này.
+        - listitem:
+          - strong: "Hành vi Nghiêm cấm IP:"
+          - text: Khách hàng bị nghiêm cấm sao chép, đăng ký, hoặc sử dụng bất kỳ tài sản trí tuệ nào của Công ty (bao gồm tên thương hiệu, mô hình) trong tên miền, tên công ty, hoặc bất kỳ hình thức nào khác nhằm mục đích gây nhầm lẫn hoặc cạnh tranh.
+      - separator
+      - heading "4. PHÍ DỊCH VỤ, THANH TOÁN VÀ HOÀN TIỀN" [level=3]
+      - list:
+        - listitem:
+          - strong: "Thời hạn Thanh toán:"
+          - text: Khách hàng phải thanh toán các hóa đơn tiếp theo trong vòng bảy (7) ngày kể từ ngày nhận được.
+        - listitem:
+          - strong: "Phí Chậm Trễ:"
+          - text: /Công ty có quyền tính phí chậm thanh toán một phần năm phần trăm \\(1\\.5%\\) mỗi tháng trên số dư chưa thanh toán, tương đương mười tám phần trăm \\(\\d+%\\) mỗi năm, kể từ ngày đáo hạn cho đến ngày thanh toán đầy đủ\\./
+        - listitem:
+          - strong: "Chính sách Hoàn trả:"
+          - text: (a) Đối với dịch vụ đã được cung cấp đúng cam kết và Khách hàng đã sử dụng, không có khoản hoàn trả nào được thực hiện; (b) Trong trường hợp dịch vụ không được cung cấp đúng cam kết hoặc có lỗi kỹ thuật do Công ty, Khách hàng có quyền yêu cầu Công ty khắc phục, cung cấp lại dịch vụ hoặc hoàn trả phần phí tương ứng với dịch vụ bị lỗi; (c) Khách hàng có quyền được hoàn trả phí dịch vụ chưa sử dụng khi Công ty đơn phương chấm dứt hợp đồng không do lỗi của Khách hàng.
+      - separator
+      - heading "5. TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM VÀ GIỚI HẠN NGHĨA VỤ" [level=3]
+      - heading "5.1. Vai trò Tư vấn và Giới hạn Nghĩa vụ của Công ty" [level=4]
+      - list:
+        - listitem:
+          - strong: "Vai trò Tư vấn:"
+          - text: Công ty TNHH Reflective Learnings (RL) chỉ giữ vai trò là công cụ tư vấn, gợi ý và cung cấp kết quả phân tích dựa trên thông tin mà Người Tiêu Dùng cung cấp.
+        - listitem:
+          - strong: "Không chịu Trách nhiệm về Quyết định:"
+          - text: RL không chịu trách nhiệm về bất kỳ thiệt hại hoặc hậu quả nào phát sinh từ mọi quyết định được đưa ra sau khi tham khảo kết quả phân tích và gợi ý từ Dịch vụ. Người Tiêu Dùng hoàn toàn chịu trách nhiệm về quyết định của mình.
+        - listitem:
+          - strong: "Khuyến nghị Chuyên môn:"
+          - text: Người Tiêu Dùng nên tự quyết định và tìm kiếm lời khuyên từ các chuyên gia có chuyên môn (như cố vấn tài chính, chuyên gia sức khỏe, v.v.) đối với các quyết định quan trọng trong cuộc sống hoặc nghề nghiệp.
+        - listitem:
+          - strong: "Không phải Công cụ Đánh giá Tâm lý/Tuyển dụng:"
+          - text: Dịch vụ không phải là công cụ đánh giá lâm sàng (tâm lý) và kết quả được cung cấp không phải là thước đo sức khỏe tâm lý. Nghiêm cấm sử dụng Dịch vụ cho mục đích tuyển dụng, thăng chức, hoặc đánh giá nhân sự.
+      - heading "5.2. Trách nhiệm về Dữ liệu Người Dùng" [level=4]
+      - list:
+        - listitem: Người Tiêu Dùng hoàn toàn chịu trách nhiệm về tính chính xác, tính hợp pháp của tất cả Dữ liệu Cá nhân, công việc, dữ liệu EMBLEM, các Nhật ký, Thành quả, Bài học, và Khoảnh khắc mà Người Tiêu Dùng tự chia sẻ và tải lên Ứng dụng/Website.
+        - listitem: RL không chịu trách nhiệm xác minh độ chính xác, đầy đủ hay tính xác thực của bất kỳ dữ liệu nào do Người Tiêu Dùng cung cấp.
+      - heading "5.3. Giới hạn Trách nhiệm Chung" [level=4]
+      - list:
+        - listitem: "/Công ty sẽ không chịu trách nhiệm bồi thường cho các thiệt hại gián tiếp, đặc biệt, ngẫu nhiên hoặc do hậu quả phát sinh từ: \\\\(a\\\\) Việc Khách hàng sử dụng sai mục đích hoặc không tuân thủ hướng dẫn sử dụng của Công ty; \\\\(b\\\\) Quyết định kinh doanh hoặc cá nhân của Khách hàng dựa trên kết quả dịch vụ mà không tham khảo ý kiến chuyên gia; \\\\(c\\\\) Dữ liệu không chính xác do Khách hàng cung cấp; \\\\(d\\\\) Các sự kiện Bất Khả Kháng \\\\(thiên tai, chiến tranh, dịch bệnh, sự cố hạ tầng Internet\\\\)\\\\. Tổng mức bồi thường tối đa của Công ty trong mọi trường hợp không vượt quá tổng số tiền Khách hàng đã thanh toán cho dịch vụ trong mười hai \\\\(\\\\d+\\\\) tháng gần nhất\\\\./"
+      - separator
+      - heading "6. ĐIỀU KHOẢN RIÊNG CHO TÍNH NĂNG EMBLEM MATCH" [level=3]
+      - paragraph: "Tính năng EMBLEM Match cho phép người dùng kết nối dựa trên sự tương đồng về bản sắc sự nghiệp. Khi kích hoạt tính năng này, khách hàng đồng ý với các quy định sau:"
+      - heading "6.1. Quyền Riêng tư và Hiển thị" [level=4]
+      - list:
+        - listitem: Khách hàng chỉ xuất hiện trong danh sách EMBLEM Match khi chủ động bật tính năng này. Hệ thống sẽ chỉ hiển thị mặc định các thông tin cơ bản như Tên, Ảnh đại diện, Hồ sơ Bản sắc cá nhân EMBLEM, thông tin liên hệ sẽ được khách hàng tùy chọn hiển thị. Các nhật ký và dữ liệu nhạy cảm khác sẽ không được hiển thị cho đối phương trừ khi khách hàng chủ động chia sẻ trong tin nhắn.
+      - heading "6.2. Quy tắc ứng xử" [level=4]
+      - list:
+        - listitem:
+          - strong: "Mục đích kết nối:"
+          - text: Trao đổi về sự nghiệp và phát triển bản sắc.
+        - listitem:
+          - strong: "Nghiêm cấm:"
+          - text: Quấy rối, gạ gẫm hẹn hò, quảng cáo đa cấp/tài chính, hoặc sử dụng ngôn từ thù ghét.
+        - listitem:
+          - strong: "Bảo mật đối phương:"
+          - text: Khách hàng có trách nhiệm bảo mật thông tin mà đối phương chia sẻ trong quá trình tương tác. Nghiêm cấm chụp màn hình nội dung trò chuyện để đăng tải công khai khi chưa có sự đồng ý.
+      - heading "6.3. An toàn Tương tác Ngoài đời thực" [level=4]
+      - list:
+        - listitem: Reflective Learnings không thực hiện xác minh lý lịch tư pháp của người dùng.
+        - listitem: Chúng tôi khuyến cáo khách hàng cực kỳ thận trọng khi gặp mặt trực tiếp. Mọi cuộc gặp ngoài ứng dụng là quyết định cá nhân; Công ty miễn trừ toàn bộ trách nhiệm đối với các rủi ro phát sinh từ các cuộc gặp này.
+      - heading "6.4. Quyền Báo cáo (Report)" [level=4]
+      - list:
+        - listitem: Công ty có quyền khóa tính năng EMBLEM Match hoặc xóa tài khoản vĩnh viễn của người dùng bị báo cáo vi phạm tiêu chuẩn cộng đồng.
+      - separator
+      - heading "7. CAM KẾT VÀ QUY TẮC ỨNG XỬ" [level=3]
+      - heading "7.1. Quy tắc Ứng xử Chuyên nghiệp" [level=4]
+      - paragraph: "Nếu sử dụng Nội dung cho mục đích huấn luyện/tư vấn (ví dụ: Huấn luyện viên), bạn phải tuân thủ các quy tắc ứng xử chuyên nghiệp, bao gồm việc không đưa ra tuyên bố sai lệch về dịch vụ của Công ty và phải tôn trọng tính bảo mật của thông tin khách hàng."
+      - heading "7.2. Chính sách Chống Tuyển dụng" [level=4]
+      - paragraph: "Bảo vệ Thông tin Kinh doanh: Khách hàng cam kết bảo mật các thông tin kinh doanh, kỹ thuật, danh sách khách hàng và nhân viên của Công ty mà Khách hàng tiếp cận được trong quá trình sử dụng dịch vụ. Khách hàng không được sử dụng các thông tin này cho mục đích cạnh tranh hoặc gây bất lợi cho Công ty trong thời hạn hai (2) năm kể từ khi chấm dứt dịch vụ."
+      - heading "7.3. Trách nhiệm Bồi thường (Indemnification)" [level=4]
+      - paragraph: "Trách nhiệm Bồi thường: Khách hàng đồng ý bồi thường cho Công ty những thiệt hại thực tế, trực tiếp và có thể chứng minh được phát sinh từ: (a) Việc Khách hàng vi phạm nghiêm trọng các điều khoản của Thỏa thuận này; (b) Việc Khách hàng vi phạm quyền sở hữu trí tuệ của bên thứ ba khi sử dụng dịch vụ; (c) Hành vi gian lận, cố ý gây thiệt hại của Khách hàng. Trách nhiệm bồi thường này không áp dụng nếu thiệt hại phát sinh một phần do lỗi của Công ty."
+      - separator
+      - heading "8. LUẬT ÁP DỤNG VÀ GIẢI QUYẾT TRANH CHẤP" [level=3]
+      - list:
+        - listitem:
+          - strong: "Luật Điều chỉnh:"
+          - text: Thỏa thuận này được điều chỉnh và giải thích theo luật pháp của nước Cộng hòa Xã hội Chủ nghĩa Việt Nam.
+        - listitem:
+          - strong: "Giải quyết Tranh chấp:"
+          - text: Mọi tranh chấp sẽ được giải quyết trước hết thông qua thương lượng thiện chí. Nếu không đạt được thỏa thuận, tranh chấp sẽ được đưa ra giải quyết tại Trung tâm Trọng tài Thương mại Thành phố Hồ Chí Minh (Tracent) theo quy tắc tố tụng của Tracent.
+      `);
+});
